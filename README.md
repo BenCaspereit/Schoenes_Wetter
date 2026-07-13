@@ -48,3 +48,16 @@ Each station is processed independently, allowing multiple stations to be comput
 
 The Python script `cleaner.py` is used to preprocess raw weather data.  
 It extracts relevant columns (timestamp and temperature) and converts them into a simplified format that can be efficiently read by the C program.
+
+
+# Performance Analysis
+
+This project evaluates the execution times of different computational tasks based on processor allocation. The following table provides a breakdown of the processing durations for Serial and Parallel execution, alongside the resulting speedup factors and overall efficiency gains achieved by adjusting processor limits.
+
+| Processors | Serial | Parallel | Speed up | Speed up Gain |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | 9.25 | 9.29 | 1 | +0% |
+| 2 | 9.15 | 7.63 | 1.22 | +22% |
+| 3 | 9.19 | 7.17 | 1.3 | +30% |
+| 4 | 9.15 | 6.76 | 1.37 | +37% |
+| Unrestricted (8)| 9.21 | 6.29 | 1.46 | +46% |
